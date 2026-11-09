@@ -1,0 +1,32 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "common.c"
+        "gateway.c"
+        "node.c"
+        "sx1262.c"
+        "drv_sx126x.c"
+        "drv_e22uart.c"
+        "wifi_log.c"
+        "lcd.c"
+        "buttons.c"
+        "leds.c"
+        "ui.c"
+    INCLUDE_DIRS "."
+    REQUIRES
+        esp_driver_spi
+        esp_driver_gpio
+        esp_driver_uart
+        esp_driver_i2c
+        esp_timer
+        esp_hw_support
+        esp_rom
+        esp_system
+        console
+        esp_wifi
+        esp_event
+        esp_netif
+        esp_http_server
+        nvs_flash
+        lwip
+)

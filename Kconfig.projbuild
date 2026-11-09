@@ -1,0 +1,27 @@
+menu "Broad Test (LCD + Wi-Fi Web Log)"
+
+    config E22_FREQ_KHZ
+        int "Tan so mac dinh (kHz)"
+        default 921500
+    config E22_SF
+        int "Spreading factor mac dinh"
+        range 5 12
+        default 10
+    config E22_BW_KHZ
+        int "Bandwidth mac dinh (kHz): 62, 125, 250, 500"
+        default 125
+    config E22_CR
+        int "Coding rate (1=4/5 ... 4=4/8)"
+        range 1 4
+        default 1
+    config E22_POWER_DBM
+        int "Cong suat chip mac dinh (dBm), toi da 22"
+        range -9 22
+        default 22
+    config FT_LOG_UART
+        bool "In log song song ra UART (de debug bang cap USB)"
+        default n
+        help
+          Bat de xem them log tren may tinh qua cap USB.
+
+endmenu
